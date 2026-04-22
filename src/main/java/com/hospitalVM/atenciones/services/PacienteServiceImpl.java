@@ -49,7 +49,7 @@ public class PacienteServiceImpl implements PacienteService{
 
     @Transactional
     @Override
-    public Paciente Save(Paciente paciente) {
+    public Paciente save(Paciente paciente) {
         if(this.findByCorreo(paciente.getCorre()) != null){
             throw new PacienteException("paciente ya existe");
         }
